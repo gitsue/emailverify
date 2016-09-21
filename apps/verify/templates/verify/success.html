@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success Page</title>
+</head>
+<body>
+	<div id="container">
+		<p>The email address you have entered is a VALID email address! Thank you!</p>
+
+		<h4>Email Addresses Entered:</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Email Address:</th>
+					<th>Date/Time Added:</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for email in emails %}
+				<tr>
+					<td>{{email.email}}</td>
+					<td>{{email.created_at}}</td>
+				</tr>
+			</tbody>
+			{% endfor %}
+		</table>
+		
+	</div>
+</body>
+</html>

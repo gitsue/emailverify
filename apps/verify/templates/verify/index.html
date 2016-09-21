@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Email Validation</title>
+</head>
+<body>
+	<div id="container">
+		<h1>{{request.session.validate}}</h1>
+
+		<form action="/success" method="post">
+		{% csrf_token %}
+			Email Address: <input type="text" name="email">
+			<input type="submit" name="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>
